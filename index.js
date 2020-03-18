@@ -131,7 +131,7 @@ function processProduct(num1, num2, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
  */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
+function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
 }
 
@@ -154,14 +154,15 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
  */
 function lowerCaseStrings(strings) {
-  strings.forEach(arrItem => {
-    console.log(arrItem.toLowerCase());
-  });
+  // strings.forEach(arrItem => {
+  //   console.log(arrItem.toLowerCase());
+  // });
   const newArray = [];
   strings.forEach(arrItem => {
     newArray.push(arrItem.toLowerCase());
-    return newArray;
+    // console.log(newArray);
   });
+  return newArray;
 }
 /**
  * ### Challenge `isItAnApple`
@@ -180,7 +181,9 @@ function lowerCaseStrings(strings) {
  */
 function isItAnApple(strings) {
   strings.map((arrItem) => {
+    
     return arrItem 
+
   });
 }
 
@@ -200,10 +203,21 @@ function isItAnApple(strings) {
  *
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
  */
+
+ //push a new array, use a new if statement. 
 function removeApple(strings) {
+
+  const newArray = [];
   strings.filter((arrItem) => {
-    return (arrItem !== "apple");
+
+    if (arrItem !== "apple"){
+      arrItem.push {}
+    }
+
+    
+
   });
+   
 }
 
 /**
@@ -298,7 +312,7 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
  */
-function tallyUpDonations(/* CODE HERE */) {
+function tallyUpDonations(runners) {
   /* CODE HERE */
 }
 
