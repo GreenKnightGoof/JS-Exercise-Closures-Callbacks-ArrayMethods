@@ -89,7 +89,7 @@ function processLastItem(stringList, callback) {
  */
 function processSum(num1, num2, callback) {
   return callback(num1 + num2);
-};
+}
 
 /**
  * ### Challenge `processProduct`
@@ -180,11 +180,15 @@ function lowerCaseStrings(strings) {
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
  */
 function isItAnApple(strings) {
-  strings.map((arrItem) => {
-    
-    return arrItem 
-
+  const newArray = [];
+  strings.map(arrItem => {
+    if (arrItem === "apple") {
+      newArray.push(true);
+    } else {
+      newArray.push(false);
+    }
   });
+  return newArray;
 }
 
 /**
@@ -204,20 +208,11 @@ function isItAnApple(strings) {
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
  */
 
- //push a new array, use a new if statement. 
+//push a new array, use a new if statement.
 function removeApple(strings) {
-
-  const newArray = [];
-  strings.filter((arrItem) => {
-
-    if (arrItem !== "apple"){
-      arrItem.push {}
-    }
-
-    
-
+  return strings.filter(arrItem => {
+    return (arrItem !== 'apple')
   });
-   
 }
 
 /**
@@ -236,8 +231,8 @@ function removeApple(strings) {
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
  */
 function stringSmash(strings) {
-  strings.reduce((accum, arrItem) => {
-    return strings;
+  return strings.reduce((accum, arrItem) => {
+    return accum += arrItem;
   });
 }
 
@@ -257,10 +252,10 @@ function stringSmash(strings) {
  * The full names appear in the array in the same order the runners appear in the `runners` array.
  */
 function getFullNames(runners) {
-  const fullNames = runners.map(runner => {
-    return `${runner.last_name}, ${runner.first_name}`;
-  });
-  return fullNames;
+ const fullNames = runners.map((runner)=>{
+   return `${runner.last_name}, ${runner.first_name}`;
+ });
+ return fullNames;
 }
 
 /**
@@ -278,10 +273,11 @@ function getFullNames(runners) {
 function firstNamesAllCaps(runners) {
   let capsArray = [];
   runners.map(arrItem => {
-    capsArray.push(arrItem.first_name.toUpperCase);
+    capsArray.push(arrItem.first_name.toUpperCase());
+
   });
   return capsArray;
-};
+}
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
